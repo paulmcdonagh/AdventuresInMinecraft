@@ -30,12 +30,12 @@ if __name__ == '__main__':
     size = None
     rentalPeriod = None
 
-    if len(sys.argv) != 5:
-        print "Usage: rent.py ipaddress name size rentalTime"
+    if len(sys.argv) != 4:
+        print "Usage: rent.py player_name geofence_sideLength rentalTime"
         exit()
     else:
         ipAddress = sys.argv[1]
-        mc = minecraft.Minecraft.create(ipAddress)
+        mc = minecraft.Minecraft.create('54.165.92.211')
         myEntityId = mc.getPlayerEntityId(sys.argv[2])
         size = sys.argv[3]
         rentalPeriod = sys.argv[4]
